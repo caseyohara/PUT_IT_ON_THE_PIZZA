@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name":    "PUT IT ON THE PIZZA",
+  "version": "0.0",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js":      ["content.js"]
+  }],
+
+  "browser_action": {
+    "default_title": "PUT IT ON THE PIZZA",
+    "default_icon": "icon.png"
+  },
+
+  "permissions": ["activeTab"]
+}
+
